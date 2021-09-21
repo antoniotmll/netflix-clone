@@ -7,7 +7,7 @@ dotenv.config();
 
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
-    useUndefinedTopology: true,
+    useUnifiedTopology: true,
 })
 
 app.listen(8800, () => {
