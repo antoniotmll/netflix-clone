@@ -42,6 +42,14 @@ router.delete("/:id", verify, async(req, res) => {
 });
 
 //GET
+router.get("/find/:id", async(req, res) => {
+    try {
+        const user = await User.findById(req.params.id);
+        res.status(200).json(user);
+    } catch (err) {
+        res.status(500).json(err)
+    }
+});
 
 //GET ALL
 
